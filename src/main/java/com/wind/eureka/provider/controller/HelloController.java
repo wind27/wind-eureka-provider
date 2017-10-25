@@ -14,12 +14,12 @@ import java.util.List;
  *
  * @author qianchun 17/10/9
  **/
-@RestController(value = "user")
+@RestController
 public class HelloController {
     @Autowired
     private DiscoveryClient client;
 
-    @RequestMapping(value = "/provider")
+    @RequestMapping(value = "/user/provider")
     public String hello(){
         System.out.println("eureka 服务提供者!!!");
 
