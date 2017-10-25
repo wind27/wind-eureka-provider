@@ -38,6 +38,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-test</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -51,19 +55,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-
-	<!--<profiles>
-		&lt;!&ndash; docker环境 &ndash;&gt;
-		<profile>
-			<id>docker</id>
-			<properties>
-				<activatedProperties>docker</activatedProperties>
-				<docker.tag>docker-demo-${project.version}</docker.tag>
-			</properties>
-		</profile>
-	</profiles>-->
-
 
 	<build>
 		<!--<defaultGoal>install</defaultGoal>
