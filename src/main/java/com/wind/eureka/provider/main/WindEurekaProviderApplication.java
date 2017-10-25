@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.RestController;
 
 @EnableEurekaClient
-@SpringBootApplication(scanBasePackages = "com.wind.eureka.provider.controller")
+@SpringBootApplication(scanBasePackages = "com.wind.zuul")
 public class WindEurekaProviderApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(WindEurekaProviderApplication.class, args);
