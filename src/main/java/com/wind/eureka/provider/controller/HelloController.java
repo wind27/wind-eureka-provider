@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author qianchun 17/10/9
  **/
-@RestController
+@RestController(value = "user")
 public class HelloController {
     @Autowired
     private DiscoveryClient client;
