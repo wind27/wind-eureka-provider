@@ -25,6 +25,9 @@ public class HelloController {
     @Value("${spring.application.name}")
     private String name;
 
+    @Value("${user.jdbc.driverClassName}")
+    private String driverClassName;
+
     @RequestMapping(value = "/user/provider")
     public String hello(){
         System.out.println("eureka 服务提供者!!!");
@@ -46,6 +49,6 @@ public class HelloController {
             }
         }
         System.out.println("-------------------------------------------");
-        return name+"-"+port;
+        return name+"-"+port + ":"+driverClassName;
     }
 }
