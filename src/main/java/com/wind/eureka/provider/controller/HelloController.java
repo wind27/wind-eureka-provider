@@ -1,6 +1,7 @@
 package com.wind.eureka.provider.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.util.CollectionUtils;
@@ -18,6 +19,11 @@ import java.util.List;
 public class HelloController {
     @Autowired
     private DiscoveryClient client;
+
+    @Value("server.port")
+    private int port;
+    @Value("spring.application.name")
+    private int name;
 
     @RequestMapping(value = "/user/provider")
     public String hello(){
@@ -40,6 +46,6 @@ public class HelloController {
             }
         }
         System.out.println("-------------------------------------------");
-        return "wind-eureka-provider";
+        return name+"-"+port;
     }
 }
