@@ -20,10 +20,10 @@ public class HelloController {
     @Autowired
     private DiscoveryClient client;
 
-    @Value("server.port")
-    private int port;
-    @Value("spring.application.name")
-    private int name;
+    @Value("${server.port}")
+    private String port;
+    @Value("${spring.application.name}")
+    private String name;
 
     @RequestMapping(value = "/user/provider")
     public String hello(){
