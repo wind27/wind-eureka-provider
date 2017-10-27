@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ import java.util.List;
  *
  * @author qianchun 17/10/9
  **/
+@RefreshScope
 @RestController
 public class HelloController {
     @Autowired
@@ -25,7 +27,8 @@ public class HelloController {
     @Value("${spring.application.name}")
     private String name;
 
-    @Value("${user.jdbc.driverClassName}")
+//    @Value("${user.jdbc.driverClassName}")
+    @Value("${user.jdbc.username}")
     private String driverClassName;
 
     @RequestMapping(value = "/user/provider")
