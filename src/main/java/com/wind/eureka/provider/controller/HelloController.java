@@ -28,8 +28,8 @@ public class HelloController {
     private String name;
 
 //    @Value("${user.jdbc.driverClassName}")
-    @Value("${user.jdbc.username}")
-    private String driverClassName;
+//    @Value("${user.jdbc.username}")
+//    private String driverClassName;
 
     @RequestMapping(value = "/user/provider")
     public String hello(){
@@ -52,6 +52,6 @@ public class HelloController {
             }
         }
         System.out.println("-------------------------------------------");
-        return name+"-"+port + ":"+driverClassName;
+        return name+"-"+port;
     }
 }
