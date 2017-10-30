@@ -27,9 +27,9 @@ public class HelloController {
     @Value("${spring.application.name}")
     private String name;
 
-    @Value("${user.jdbc.driverClassName}")
+//    @Value("${user.jdbc.driverClassName}")
 //    @Value("${user.jdbc.username}")
-    private String driverClassName;
+//    private String driverClassName;
 
     @RequestMapping(value = "/user/provider")
     public String hello(){
